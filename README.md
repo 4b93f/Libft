@@ -1,3 +1,3 @@
 # Libft
 
-Ma propre librairie
+Ma propre librairie de fonction
