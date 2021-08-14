@@ -1,23 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_print_lst.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chly-huc <chly-huc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/06 12:08:57 by chly-huc          #+#    #+#             */
-/*   Updated: 2021/04/23 17:47:18 by chly-huc         ###   ########.fr       */
+/*   Created: 2021/03/13 16:26:33 by chly-huc          #+#    #+#             */
+/*   Updated: 2021/03/14 17:21:16 by chly-huc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
+#include "libft.h"
 
-int	ft_toupper(int c)
+void	ft_print_lst(t_list *lst)
 {
-	if (c >= 97 && c <= 122)
-		return (c - 32);
-	return (c);
+	if (!lst)
+		return ;
+	while (lst)
+	{
+		ft_putendl_fd(lst->content, 1);
+		lst = lst->next;
+	}
 }
-/*
-** Mets une minsucule en majuscule
-*/

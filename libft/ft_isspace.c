@@ -1,23 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_isspace.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chly-huc <chly-huc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/06 12:08:57 by chly-huc          #+#    #+#             */
-/*   Updated: 2021/04/23 17:47:18 by chly-huc         ###   ########.fr       */
+/*   Created: 2021/03/13 16:29:08 by chly-huc          #+#    #+#             */
+/*   Updated: 2021/04/23 17:17:07 by chly-huc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
+#include "libft.h"
 
-int	ft_toupper(int c)
+int	ft_isspace(int c)
 {
-	if (c >= 97 && c <= 122)
-		return (c - 32);
-	return (c);
+	return (c == '\t' || c == '\n' || c == '\v' || c == '\f' || c == '\r'
+		|| c == ' ');
 }
-/*
-** Mets une minsucule en majuscule
-*/

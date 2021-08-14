@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_atoli.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chly-huc <chly-huc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/06 15:20:02 by chly-huc          #+#    #+#             */
-/*   Updated: 2021/04/26 17:23:51 by chly-huc         ###   ########.fr       */
+/*   Created: 2021/04/23 21:15:27 by chly-huc          #+#    #+#             */
+/*   Updated: 2021/04/27 20:00:59 by chly-huc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	result(int sign, int res)
+long	result_atoli(int sign, long res)
 {
 	if (sign > 0)
 		return (res);
@@ -20,9 +20,9 @@ int	result(int sign, int res)
 		return (-res);
 }
 
-int	ft_atoi(const char *str)
+long	ft_atoli(const char *str)
 {
-	int			i;
+	long		i;
 	long long	res;
 	int			sign;
 
@@ -46,8 +46,5 @@ int	ft_atoi(const char *str)
 				return (0);
 		}
 	}
-	return (result(sign, res));
+	return (result_atoli(sign, res));
 }
-/*
-** Changer une chaine de caractère en "nombre"
-*/
